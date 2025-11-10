@@ -17,5 +17,6 @@ A modern and responsive login/register interface built with **React**, **Tailwin
 ## 📦 Installation
 ```bash
 git clone https://github.com/yourusername/auth-ui.git
+cd formikk-app
 npm install
 npm run dev
