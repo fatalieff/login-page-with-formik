@@ -1,8 +1,12 @@
 import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
 import "./App.css";
+
 import BackGroundImg from "./assets/Rectangle 26.png";
+import { useState } from "react";
 
 function App() {
+  const [page, setPage] = useState("login");
   return (
     <div className="container flex">
       <div className="left-section w-[55%] h-[100vh] relative ">
@@ -23,7 +27,11 @@ function App() {
         />
       </div>
       <div className="right-section w-[45%]">
-        <LoginForm />
+        {page === "login" ? (
+          <LoginForm setPage={setPage} />
+        ) : (
+          <RegisterForm setPage={setPage} />
+        )}
       </div>
     </div>
   );
